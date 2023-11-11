@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: radial-gradient(#F6B9C8, #263343);
+    height: 100vh;
+    color: #fff;
+    font-family: 'Luckies Guy', cursive ;
+}
+
+h2{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;    
+    flex-wrap: wrap;
+}
+
+.active-nat-item{
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+    transform: skew(-10deg, 0);
+}
+
+.store-main-section h1{
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 1px 5px #BD85A2;
+    align-items: center;
+    justify-items: center;
+}
+
+.pink-skin{
+    background: radial-gradient(#F4B9C8, #BD85A2);
+}
+
+.purple-skin{
+    background: radial-gradient(#344164, #778BAB);
+}
+
+.blue-skin{
+    background: radial-gradient(#8FB5CA, #1A2032);
+}
+
+.grid-item{
+    display: grid;
+    align-items: stretch;
+    justify-items: center;
+}
+
+.store-grid-container{
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    grid-template-areas: 
+    "skin1 skin2 skin4 skin5"
+    "skin1 skin3 skin4 skin6";
+    align-items: stretch;
+    justify-items: stretch;
+    height: 100%;
+    gap: 10px 10px;
+    padding-bottom: 20px;
+}
+
+.grid-item-1{
+    grid-area: skin1;
+}
+.grid-item-2{
+    grid-area: skin2;
+}
+.grid-item-3{
+    grid-area: skin3;
+}
+.grid-item-4{
+    grid-area: skin4;
+}
+.grid-item-5{
+    grid-area: skin5;
+}
+.grid-item-6{
+    grid-area: skin6;
+}
+
+.skin-image{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media(max-width:600px){
+    .store-grid-container{
+        display: grid;
+        grid-template: repeat(6, 1fr) / 1fr;
+        grid-template-areas: 
+        "skin1" 
+        "skin2" 
+        "skin3" 
+        "skin4"
+        "skin5"
+        "skin6";
+        align-items: stretch;
+        justify-items: stretch;
+        height: auto;
+        gap: 10px 10px;
+    }
+}
+
