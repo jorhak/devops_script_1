@@ -4,6 +4,7 @@ class LoginController
 {
 
     public function index(){
+        session_start();
         require_once('../app/views/login/index.php');
     }
 
@@ -76,7 +77,6 @@ class LoginController
     }
 
     public function cerrarSesion() {
-        session_start();
         $_SESSION["login"] = "okno";
         require_once('../app/views/login/index.php');
     }

@@ -1,6 +1,15 @@
 <?php
 
 
+
+if (isset($_SESSION["login"])){
+    echo $_SESSION["login"];
+    if ($_SESSION["login"] != "okay"){
+        header("Location: ?controller=login&action=index");
+        exit();
+    } 
+}
+
 ?>
 
 
