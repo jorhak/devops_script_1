@@ -22,6 +22,7 @@ if (isset($_SESSION["login"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devops</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
 </head>
 
 <body>
