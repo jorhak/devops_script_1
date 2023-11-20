@@ -23,6 +23,7 @@ if (isset($_SESSION["login"])){
     <title>Devops</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/gallery.css">
+    <link rel="stylesheet" href="../assets/css/package.css">
 </head>
 
 <body>

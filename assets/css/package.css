@@ -1,0 +1,31 @@
+.container__formulario{
+    width: 400px;
+    border-radius: 20px;
+    border: 2px solid #1A2032;
+    padding: 20px;
+}
+
+.campos, .campos label, .campos input{
+    float: left;
+    padding: 5px;
+    width: 100%;
+    margin-top: 0px;
+    outline: none;
+    border: none;
+}
+
+button{
+    border: none;
+    font-size: 14px;
+    background: #344164;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+}
+
+button:hover{
+    background: #BD85A2;
+    color: #1A2032;
+}
