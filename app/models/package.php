@@ -33,7 +33,17 @@ class package{
         }else{
             return false;
         }
-    }    
+    }
+    
+    public static function Listar(){
+        $list = [];
+        $db = Db::getInstance();
+        $response = $db->query("SELECT* FROM paquete");
+        foreach($response->fetchAll() as $tabla){
+            $list[] = new package($tabla['nombre'], $tabla['descripcion'], $tabla['dias'], $tabla['precio'], $tabla['destino'], $tabla['foto']); 
+        }
+        return $list;
+    }
 
 }
 

@@ -4,7 +4,12 @@ class PackageController
 {
     public function index(){
         session_start();
+        $paquetes = package::Listar();
         require_once('../app/views/package/index.php');
+    }
+
+    public function registrar(){
+        require_once('../app/views/package/registrar.php');
     }
 
     public function nuevo(){
@@ -58,6 +63,11 @@ class PackageController
                         </script>';
             }
         }
+    }
+
+    public function listar(){
+        $paquetes = package::Listar();
+        require_once('../app/views/package/index.php');
     }
 
 

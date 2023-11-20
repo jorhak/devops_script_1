@@ -37,7 +37,7 @@ $controllers = array(
     'booking' => ['index'],
     'gallery' => ['index'],
     'home' => [ 'index'],
-    'package' => ['index','nuevo'],
+    'package' => ['index', 'nuevo', 'registrar'],
     'login' => ['index', 'registrar', 'iniciarSesion', 'cerrarSesion'],
 );
 

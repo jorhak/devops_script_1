@@ -6,35 +6,29 @@
 require_once('../app/views/template/header.php');
 ?>
 
-<section class="container__formulario">
-    <form action="?controller=package&action=nuevo" method="post" enctype="multipart/form-data">
-        <div class="campos">
-            <label>Nombre</label>
-            <input type="text" name="nombre" id="nombre">
-        </div>
-        <div class="campos">
-            <label>Descripcion</label>
-            <input type="text" name="descripcion" id="descripcion">
-        </div>
-        <div class="campos">
-            <label>Dias</label>
-            <input type="text" name="dias" id="dias">
-        </div>
-        <div class="campos">
-            <label >Precio</label>
-            <input type="text" name="precio" id="precio">
-        </div>
-        <div class="campos">
-            <label>Destino</label>
-            <input type="text" name="destino" id="destino">
-        </div>
-        <div class="campos">
-            <label>Imagen</label>
-            <input type="file" name="foto" id="foto">
-        </div>
-        <button type="submit">Enviar</button>
-    </form>
-</section>
+<div class="container__package">
+    <div class="list">
+        <?php
+        foreach ($paquetes as $paquete) {
+        ?>
+            <div class="item">
+
+                <div class="img">
+                    <img src="<?php echo $paquete->foto; ?>">
+                </div>
+                <div class="content">
+                    <div class="title"><?php echo $paquete->nombre; ?></div>
+                    <div class="descripcion">
+                        <?php echo $paquete->descripcion; ?>
+                    </div>
+                    <div class="price">$ <?php echo $paquete->precio; ?> </div>
+                    <botton onclick=" location.href='?controller=booking&action=index' " class="add">Add card</botton>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
 
 <?php
 require_once('../app/views/template/footer.php');
