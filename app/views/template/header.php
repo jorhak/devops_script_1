@@ -32,7 +32,7 @@ if (isset($_SESSION["login"])){
         <ul class="nav-list">
             <li><a href="?controller=home&action=index">Home Page</a></li>
             <li><a href="?controller=gallery&action=index">Gallery</a></li>
-            <li class="active-nat-item"><a href="?controller=package&action=index">Package</a></li>
+            <li><a href="?controller=package&action=index">Package</a></li>
             <li><a href="?controller=booking&action=index">Booking</a></li>
             <li><a href="?controller=login&action=cerrarSesion">Cerrar Sesion</a></li>
         </ul>

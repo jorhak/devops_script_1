@@ -40,8 +40,9 @@ class PackageController
                         $dias = $_POST['dias'];
                         $precio = $_POST['precio'];
                         $destino = $_POST['destino'];
-                        $response = package::Guardar($nombre, $descripcion, $dias, $precio, $destino, $ruta);
- 
+                        package::Guardar($nombre, $descripcion, $dias, $precio, $destino, $ruta);
+                        $paquetes = package::Listar();
+                        require_once('../app/views/package/index.php');
                     }else {
                         echo'<script type="text/javascript">
                             alert("Ocurrió un error al mover archivo");

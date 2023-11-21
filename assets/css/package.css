@@ -1,3 +1,4 @@
+/*Formulario*/
 .container__formulario{
     width: 400px;
     border-radius: 20px;
@@ -104,10 +105,12 @@ button:hover{
     border: none;
     border-radius: 20px;
     text-align: center;
+    cursor: pointer;
 }
 
-.add{
-    cursor: pointer;
+.item .content .add:hover{
+    background: #344164;
+    color: #d89cd1;
 } 
 
 .item:hover img{

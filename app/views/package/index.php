@@ -6,6 +6,10 @@
 require_once('../app/views/template/header.php');
 ?>
 
+<div class="registrar_paquete">
+    <button onclick=" location.href='?controller=package&action=registrar' " class="add">Registrar Paquete</button>
+</div>
+
 <div class="container__package">
     <div class="list">
         <?php
@@ -27,6 +31,9 @@ require_once('../app/views/template/header.php');
             </div>
         <?php } ?>
     </div>
+    <ul class="listPage">
+            
+    </ul>
 </div>
 
 
