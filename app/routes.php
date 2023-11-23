@@ -9,6 +9,8 @@ function call($controller, $action){
             break;
         case 'booking':
             require_once('models/booking.php');
+            require_once('models/register.php');
+            require_once('models/package.php');
             $controller = new BookingController();
             break;
         case 'gallery':

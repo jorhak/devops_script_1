@@ -4,6 +4,7 @@
 
 if (isset($_SESSION["login"])){
     echo $_SESSION["login"];
+    echo $_SESSION["correo"];
     if ($_SESSION["login"] != "okay"){
         header("Location: ?controller=login&action=index");
         exit();

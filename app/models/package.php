@@ -1,6 +1,7 @@
 <?php
 
 class package{
+    public $id;
     public $nombre;
     public $descripcion;
     public $dias;
@@ -8,7 +9,8 @@ class package{
     public $destino;
     public $foto;
 
-    public function __construct($nombre, $descripcion, $dias, $precio, $destino, $foto){
+    public function __construct($id, $nombre, $descripcion, $dias, $precio, $destino, $foto){
+        $this->id= $id;
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
         $this->dias = $dias;
@@ -40,7 +42,7 @@ class package{
         $db = Db::getInstance();
         $response = $db->query("SELECT* FROM paquete");
         foreach($response->fetchAll() as $tabla){
-            $list[] = new package($tabla['nombre'], $tabla['descripcion'], $tabla['dias'], $tabla['precio'], $tabla['destino'], $tabla['foto']); 
+            $list[] = new package($tabla['id'], $tabla['nombre'], $tabla['descripcion'], $tabla['dias'], $tabla['precio'], $tabla['destino'], $tabla['foto']); 
         }
         return $list;
     }

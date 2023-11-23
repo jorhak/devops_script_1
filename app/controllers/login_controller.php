@@ -61,6 +61,7 @@ class LoginController
                 if ($ContrasenaArchivo==$password) {
                     session_start();
                     $_SESSION["login"] = "okay";
+                    $_SESSION["correo"] = $correo;
                     require_once('../app/views/home/index.php');
                 }else{
                     $MensajeError = 'Valores invalidos';
@@ -78,6 +79,7 @@ class LoginController
 
     public function cerrarSesion() {
         $_SESSION["login"] = "okno";
+        $_SESSION["correo"] = "";
         require_once('../app/views/login/index.php');
     }
 

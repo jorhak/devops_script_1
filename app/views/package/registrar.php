@@ -32,7 +32,7 @@ require_once('../app/views/template/header.php');
             <label>Imagen</label>
             <input type="file" name="foto" id="foto">
         </div>
-        <button type="submit">Enviar</button>
+        <button class="add" type="submit">Enviar</button>
     </form>
 </section>
 

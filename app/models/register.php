@@ -1,12 +1,14 @@
 <?php
 
 class register{
+    public $id;
     public $nombre;
     public $correo;
     public $usuario;
     public $contrasena;
 
-    public function __construct($nombre, $correo, $usuario, $contrasena){
+    public function __construct($id, $nombre, $correo, $usuario, $contrasena){
+        $this->id = $id;
         $this->nombre = $nombre;
         $this->correo = $correo;
         $this->usuario = $usuario;
@@ -19,7 +21,7 @@ class register{
         $response = $db->query('SELECT* FROM usuario WHERE correo="'.$correo.'" ');
         
         foreach ($response->fetchAll() as $tabla) {
-            $list[] = new register($tabla['nombre'], $tabla['correo'], $tabla['usuario'], $tabla['contrasena']); 
+            $list[] = new register($tabla['id'], $tabla['nombre'], $tabla['correo'], $tabla['usuario'], $tabla['contrasena']); 
         }
         return $list;
     }
