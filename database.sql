@@ -29,10 +29,10 @@ CREATE TABLE IF NOT EXISTS reserva
     telefono varchar(8) not null,
     direccion varchar(50) not null,
     id_paquete int not null,
-    adultos int (2),
-    ninos int (2),
+    adultos int(2),
+    ninos int(2),
     fecha date not null,
     primary key(id, id_usuario),
     foreign key(id_usuario) references usuario(id),
-    foreign key(id_paquete) references paquete(id),
+    foreign key(id_paquete) references paquete(id)
 );
