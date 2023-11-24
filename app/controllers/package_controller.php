@@ -25,11 +25,11 @@ class PackageController
                         </script>';
         }else {
             if (in_array($_FILES['foto']['type'], $PERMITIDOS) && $_FILES['foto']['size'] <= LIMITE * 1024){
-                //Desde subir.php a la carpeta imagenes hay que salir un directorio
-                //../imagenes/nombreDeArchivo
+                //Desde ?controller=package&action=registrar a la carpeta imagenes hay que salir un directorio
+                //../assets/images/
                 $rutaEnServidor = "../assets/images/" . $_FILES['foto']['name'];
  
-                //Desde index.php, la carpeta imagenes está en imagenes/nombreDeArchivo
+                //Desde ?controller=package&action=registrar, la carpeta imagenes está en ../assets/images/
                 $ruta = "../assets/images/" . $_FILES['foto']['name'];
  
                 if (!file_exists($ruta)){
@@ -46,21 +46,21 @@ class PackageController
                     }else {
                         echo'<script type="text/javascript">
                             alert("Ocurrió un error al mover archivo");
-                            window.location="http://localhost/subirArchivos/index.php"
+                            window.location="?controller=package&action=registrar"
                             </script>';
                     }
  
                 }else{
                     echo'<script type="text/javascript">
                         alert("Este archivo ya existe en la BD");
-                        window.location="http://localhost/subirArchivos/index.php"
+                        window.location="?controller=package&action=registrar"
                         </script>';
                 }
  
             }else {
                 echo'<script type="text/javascript">
                         alert("Tipo de archivo no permitido o excede tamaño");
-                        window.location="http://localhost/subirArchivos/index.php"
+                        window.location="?controller=package&action=registrar"
                         </script>';
             }
         }
