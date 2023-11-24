@@ -36,7 +36,7 @@ function call($controller, $action){
 
 $controllers = array(
     'pages' => ['home', 'error404', 'error500'],
-    'booking' => ['index'],
+    'booking' => ['index', 'nuevo'],
     'gallery' => ['index'],
     'home' => [ 'index'],
     'package' => ['index', 'nuevo', 'registrar'],

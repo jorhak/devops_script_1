@@ -1,0 +1,11 @@
+.container__booking{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 0px 20px;
+}
+
+.container__booking .tabla{
+    margin-left: 50px;
+}

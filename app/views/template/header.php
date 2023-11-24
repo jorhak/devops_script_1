@@ -25,6 +25,7 @@ if (isset($_SESSION["login"])){
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/gallery.css">
     <link rel="stylesheet" href="../assets/css/package.css">
+    <link rel="stylesheet" href="../assets/css/booking.css">
 </head>
 
 <body>

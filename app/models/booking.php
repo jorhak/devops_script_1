@@ -49,9 +49,9 @@ class booking{
     public static function Listar(){
         $list = [];
         $db = Db::getInstance();
-        $response = $db->query("SELECT* FROM reservas");
+        $response = $db->query("SELECT* FROM reserva ORDER BY id DESC");
         foreach($response->fetchAll() as $tabla){
-            $list[] = new package($tabla['id'], $tabla['nombre'], $tabla['descripcion'], $tabla['dias'], $tabla['precio'], $tabla['destino'], $tabla['foto']); 
+            $list[] = new booking($tabla['id'], $tabla['id_usuario'], $tabla['usuario_nombre'], $tabla['usuario_correo'], $tabla['telefono'], $tabla['direccion'], $tabla['id_paquete'], $tabla['adultos'], $tabla['ninos'], $tabla['fecha']); 
         }
         return $list;
     }
