@@ -3,8 +3,8 @@
 
 
 if (isset($_SESSION["login"])){
-    echo $_SESSION["login"];
-    echo $_SESSION["correo"];
+    //echo $_SESSION["login"];
+    //echo $_SESSION["correo"];
     if ($_SESSION["login"] != "okay"){
         header("Location: ?controller=login&action=index");
         exit();
@@ -57,4 +57,3 @@ if (isset($_SESSION["login"])){
 
         ?>
     </nav>
-    <p><?php echo $_SESSION["login"]; ?> </p>

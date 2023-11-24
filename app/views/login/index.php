@@ -17,7 +17,7 @@
             <!-- Esto es el fondo -->
             <div class="caja__trasera">
                 <div class="caja__trasera-login">
-                    <p><?php echo $_SESSION["login"]; ?> </p>
+                    <!-- <p><?php echo $_SESSION["login"]; ?> </p> -->
                     <h3>Ya tienes una cuenta?</h3>
                     <p>Inicia sesion para entrar a la pagina</p>
                     <button id="btn__iniciar-sesion">Iniciar sesion</button>
